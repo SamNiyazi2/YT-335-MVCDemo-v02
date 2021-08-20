@@ -6,6 +6,16 @@
     <title>@ViewData["Title"] - YT_335_MVCDemo_v02</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+
+
+
+
+    @*// 08/20/2021 03:10 pm - SSN - v02 [20210820-1506] - [002] - 01 - Adding Blazor*@
+    <base href="~/" />
+
+
+
+
 </head>
 <body>
     <header>
@@ -43,6 +53,11 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @*// 08/20/2021 03:13 pm - SSN - v02 [20210820-1506] - [003] - 01 - Adding Blazor*@
+    <script src="_framework/blazor.server.js"></script>
+
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

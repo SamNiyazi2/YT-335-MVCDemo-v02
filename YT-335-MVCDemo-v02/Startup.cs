@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.HttpsPolicy; 
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,6 +24,17 @@ namespace YT_335_MVCDemo_v02
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+             
+
+            // 08/20/2021 03:30 pm - SSN - v02 [20210820-1506] - [007] - 01 - Adding Blazor
+         
+
+            services.AddServerSideBlazor();
+            // Got error. Guessing for browsing.
+            // services.AddRazorPages();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +59,13 @@ namespace YT_335_MVCDemo_v02
 
             app.UseEndpoints(endpoints =>
             {
+
+
+                // 08/20/2021 03:21 pm - SSN - v02 [20210820-1506] - [005] - 01 - Adding Blazor
+                endpoints.MapBlazorHub();
+
+              
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

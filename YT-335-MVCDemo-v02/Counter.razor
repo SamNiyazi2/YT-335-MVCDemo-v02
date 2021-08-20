@@ -1,0 +1,19 @@
+﻿@*// 08/20/2021 03:23 pm - SSN - v02 [20210820-1506] - [006] - 01 - Adding Blazor*@
+
+
+
+@code {
+
+    int i = 0;
+    private void IncrementCounter()
+    {
+        i += 1;
+    }
+}
+
+
+<h3>Counter</h3>
+
+<p>Current count: @i</p>
+
+<button @onclick="IncrementCounter" class="btn btn-primary">Click me!</button>
